@@ -1,0 +1,100 @@
+@aside_width:170px;
+@header_height:50px;
+@maincolor:#393d49;
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header{
+    background: @maincolor;
+    .h_logo{
+        width: @aside_width;
+        height: @header_height;
+        float: left;
+        line-height: @header_height;
+        color: rgba(255, 255, 255, 0.7);
+        padding-left: 30px;
+        font-size: 26px;
+        cursor: pointer;
+    }
+    .h_logo:hover{
+        color: rgba(255, 255, 255, 1);
+    }
+    .h_nav{
+        float: left;
+    }
+    .h_user{
+        float: right;
+        .iconfont{
+            color: rgba(255,255,255,.7);
+            font-size: 18px;
+        }
+        a:hover .iconfont{
+            color: rgba(255,255,255,1);
+        }
+        ul ,li{
+            line-height: @header_height;
+        }
+    }
+}
+.section{
+    position: absolute;
+    top: @header_height;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    .aside{
+        transition: all 0.25s linear;
+        position: absolute;
+        left: 0px;
+        width: @aside_width;
+        height: 100%;
+        top:0px;
+        overflow: hidden;
+        overflow-y: auto;
+        ul{
+            width: @aside_width;
+            height: 100%;
+            .a_icon{
+                color: rgba(255,255,255,.7);
+                margin-right: 10px;
+                font-size: 21px;
+                float: left;
+            }
+            a:hover .a_icon{
+                color: rgba(255,255,255,1);
+            }
+        }
+    }
+    .ifarem{
+        transition: all 0.75s linear;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: @aside_width;
+        .ibox{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            .layui-tab-content{
+                padding: 0px;
+                width: 100%;
+                position: absolute;
+                top: 40px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                height: auto !important;
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }   
+}

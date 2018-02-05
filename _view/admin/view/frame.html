@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>叮购纸业后台管理系统</title>
+    <link rel="icon" href="../favicon.ico"> 
+    <link rel="stylesheet" href="../src/css/base.css">
+    <link rel="stylesheet" href="../src/layui/css/layui.css">
+    <link rel="stylesheet" href="../src/icon/iconfont.css">
+    <link rel="stylesheet" href="../src/css/frame.css">
+</head>
+<body>
+    <div class='header nofiy'>
+        <div class='h_logo'>DG</div>
+        <div class='h_user'>
+            <ul class="layui-nav" style="text-align:right">
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);" class="txt">
+                        <i class="iconfont icon-xiaoxizhongxin"></i>
+                        <span class="layui-badge">9</span>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-wode"></i>我</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="/">退了</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class='section'>
+        <div class='aside'>
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);"><i class="a_icon iconfont icon-tijikongjian-xianxing"></i>个人主页</a>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;"><i class="a_icon iconfont icon-chaibaoguoqujian-xianxing"></i>商品管理</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:void(0);">详细信息</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">统计</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);"><i class="a_icon iconfont icon-peizaizhuangche-xianxing"></i>订单管理</a>
+                </li>
+
+                <!-- 管理员专属 -->
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">
+                        <i class="a_icon iconfont icon-jifen-xianxing"></i>商品类别*
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <i class="a_icon iconfont icon-yonghu-yuan"></i>会员管理*</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:void(0);">账号安全</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">详细信息</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">地址管理</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <i class="a_icon iconfont icon-quanxianyuechi-xianxing"></i>管理员管理*</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:void(0);">我的权限</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">管理员信息</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">消息列表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <!-- 结束 -->
+            </ul>
+        </div>
+        <div class='ifarem'>
+            <div class="ibox layui-tab layui-tab-card" lay-allowClose="true">
+                <ul class="layui-tab-title">
+                    <li class="layui-this" lay-id="tab_home">个人主页</li>
+                </ul>
+                <div class="layui-tab-content" style="height: 100px;">
+                    <iframe frameborder="0" src="./home.html" class="layui-tab-item layui-show"></iframe>          
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../src/jquery.js"></script>    
+    <script src="../src/layui/layui.all.js"></script>
+    <script src="../src/layui/layui.js"></script>
+</body>
+</html>

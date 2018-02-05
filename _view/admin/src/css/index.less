@@ -1,0 +1,180 @@
+@maincolor:#393d49;
+@acolor:#f5f5f5;
+@asize:12px;
+@letter:1px;
+
+@login_width:360px;
+@login_height:330px;
+@login_border:1px solid #ccc;
+@login_color:linear-gradient(-20deg,
+        rgba(255,255,255,1),
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,1)                
+    );;
+
+@inputmargin:7px 20px;
+@inputpadding:5px 20px;
+
+@code_width:110px;
+@code_height:45px;
+
+@btncolor:#f5f5f5;
+@btnbcolor:#5f7da4;
+@btnbhcolor:#7995b9;
+
+body,html{
+    overflow: hidden;
+}
+.main{
+    background: @maincolor;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    // header
+    .header{
+        width: 100%;
+        height: 90px;
+        text-align: right;
+        ul{
+            float: right;
+            margin-right: 100px;
+        }
+        li{
+            float: left;
+        }
+        a{
+            display: table-cell;
+            height: 90px;
+            vertical-align: bottom;
+            color: @acolor;
+            font-size: @asize;
+            padding: 10px 20px;
+            letter-spacing: @letter;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    //setion
+    .section{
+        position: absolute;
+        top: 120px;
+        bottom: 100px;
+        left: 0px;
+        right: 0px;
+        .s_left{
+            float: left;
+            .s_logo{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .s_right{
+            float: right;
+        }
+        .s_login{
+            width: @login_width;
+            height: @login_height;
+            background: @login_color;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border: @login_border;
+            box-shadow: 0 2px 3px #808080;
+            h3,div{
+                position: relative;
+            }
+            h3{
+                height: 45px;
+                line-height: 45px;
+                font-size: 18px;
+                border-bottom: @login_border;
+                padding-left: 20px;
+                margin-bottom: 15px;
+                small{
+                    font-size: 13px;
+                    color: #555;
+                    margin-left: 5px;
+                }
+            }
+            div{
+                padding: @inputmargin;
+                .iconfont{
+                    font-size: 20px;
+                    position: absolute;
+                    top: 17px;
+                    left: 36px;
+                }
+                input{
+                    border:1px solid #ddd;
+                    width: 100%;
+                    height: 45px;
+                    padding-left: 10px;
+                    float: left;
+                }
+                #admin,#password{
+                    padding-left: 50px;
+                }
+                #code{
+                    margin-bottom: 10px;
+                    width: 190px;
+                }
+                #codeImg{
+                    float: left;
+                    border:1px solid #ddd;
+                    height: @code_height;
+                    width: @code_width;
+                    margin-left: 18px;
+                    img{
+                        height: @code_height;
+                        width: @code_width;
+                        float: left;
+                    }
+                }
+                #load{
+                    background: @btnbcolor;
+                    color: @btncolor;
+                    cursor: pointer;
+                }
+                #load:hover{
+                    background: @btnbhcolor;
+                }
+            }
+            #info{
+                color: rgb(212, 11, 11);
+                display: block;
+                width: 100%;
+                height: 12px;
+                line-height: 12px;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+    .section>div{
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }
+    // footer
+    .footer{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 90px;
+        p{
+            line-height: 90px;
+            text-align: center;
+            color: @acolor;
+            font-size: @asize;
+            letter-spacing: @letter;
+        }    
+    }
+}
